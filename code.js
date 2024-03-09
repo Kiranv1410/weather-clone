@@ -77,7 +77,7 @@ const getWeatherDetails = (cityName, latitude, longitude) => {
 const getCityCoordinates = () => {
   const cityName = cityInput.value.trim();
   if (cityName === "") return;
-  const API_URL = `https://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=1&appid=0ca5c5e9f0715486e938d7387e00fdf6`;
+  const API_URL = `https://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=1&appid=${API_KEY}`;
 
   // Get entered city coordinates (latitude, longitude, and name) from the API response
   fetch(API_URL)
